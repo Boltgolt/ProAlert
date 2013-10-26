@@ -1,8 +1,6 @@
 if (window.location.host != "www.probux.com"){
 alert("You can only use ProAlert on probux.com... (DUH)")}
 
-var doAlert = false
-var timeOut = 60
 var oldTitle = document.title
 var flashVar = true
 
@@ -13,7 +11,7 @@ div.style.background = "#b30000";
 div.style.color = "#ffffff";
 div.style.textAlign="center";
 div.style.fontSize="15px";
-div.style.paddingTop="5px"
+div.style.paddingTop="5px" 
 div.style.position="relative";
 div.style.borderBottom="3px solid #960000";
 div.id = "ProAlertbar"
@@ -46,7 +44,7 @@ if(typeof timeSet !== "undefined"){clearTimeout(timeSet)}
 div.style.height = "82px"
 if (doAlert == true){var temp="checked='checked'"}
 else {var temp=""}
-div.innerHTML= "<form action='' method='post' onsubmit='return closeOptions();'>Change your tab to Probux when new ads are available. <input type='checkbox' id='checkform' " + temp + " ><br>Refresh data after <input type='text' id='textform' value='" + timeOut + "' maxlength='3' style='width: 25px;text-align: center;height:17px;border:none;box-shadow:none;'> seconds<br><a href='https://github.com/Boltgolt/ProAlert' style='color:white;text-decoration:none;'>github </a><input type='submit' value='Save & close' style='margin-top:9px;border:none;box-shadow:none;height:27px;width:auto;'><a href='http://www.probux.com/forum/t44949--proalert-adalert-for-probux-javascript-bookmark-' style='color:white;text-decoration:none;'> forum</a></form>"
+div.innerHTML= "<form action='' method='post' onsubmit='return closeOptions();'>Change your tab to Probux when new ads are available. <input type='checkbox' id='checkform' " + temp + " ><br>Refresh data after <input type='text' id='textform' value='" + timeOut + "' maxlength='3' style='width: 25px;text-align: center;height:17px;border:none;box-shadow:none;'> seconds<br><a href='https://github.com/Boltgolt/ProAlert' style='color:white;text-decoration:none;'>github </a><input type='submit' value='Save & close' style='margin-top:9px;border:none;box-shadow:none;height:27px;width:auto;'><a href='#' style='color:white;text-decoration:none;'> forum</a></form>"
 div.onclick=""
 div.style.cursor="default";
 }
@@ -73,7 +71,9 @@ if (parseInt(document.getElementById("textform").value) == "NaN"){
 error("You can only enter numbers!")
 return false;}
 window.doAlert = document.getElementById('checkform').checked
+setCookie("ProAlert-Alert",doAlert,365)
 window.timeOut = parseInt(document.getElementById("textform").value)
+setCookie("ProAlert-Time",timeOut,365)
 div.innerHTML="Your settings have been saved!"
 div.style.height = "21px";
 div.onclick = function(){openOptions()};
@@ -141,6 +141,38 @@ else {
 div.innerHTML= "Next refresh in " + tempTime + " seconds."
 timeSet = setTimeout(function(){time(tempTime)},1000);}}
 
+function getCookie(c_name){
+var c_value = document.cookie;
+var c_start = c_value.indexOf(" " + c_name + "=");
+if (c_start == -1){
+c_start = c_value.indexOf(c_name + "=");}
+if (c_start == -1){
+c_value = null;}
+else{
+c_start = c_value.indexOf("=", c_start) + 1;
+var c_end = c_value.indexOf(";", c_start);
+if (c_end == -1){
+c_end = c_value.length;}
+c_value = unescape(c_value.substring(c_start,c_end));}
+return c_value;}
+
+function setCookie(c_name,value,exdays){
+var exdate=new Date();
+exdate.setDate(exdate.getDate() + exdays);
+var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+do
+
+var alertCookie=getCookie("ProAlert-Alert")
+if (alertCookie == null || alertCookie == ""){
+var doAlert = false}
+else {
+var doAlert = alertCookie}
+
+var timeCookie=getCookie("ProAlert-Time")
+if (timeCookie == null || timeCookie == ""){
+var timeOut = 60}
+else {
+var timeOut = timeCookie}
+
 div.innerHTML = "Preparing ProAlert...";
 getName()
-
