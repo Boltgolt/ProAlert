@@ -46,7 +46,7 @@ if(typeof timeSet !== "undefined"){clearTimeout(timeSet)}
 div.style.height = "82px"
 if (doAlert == true){var temp="checked='checked'"}
 else {var temp=""}
-div.innerHTML= "<form action='' method='post' onsubmit='return closeOptions();'>Change your tab to Probux when new ads are available. <input type='checkbox' id='checkform' " + temp + " ><br>Refresh data after <input type='text' id='textform' value='" + timeOut + "' maxlength='3' style='width: 25px;text-align: center;height:17px;border:none;box-shadow:none;'> seconds<br><a href='https://github.com/Boltgolt/ProAlert' style='color:white;text-decoration:none;'>github </a><input type='submit' value='Save & close' style='margin-top:9px;border:none;box-shadow:none;height:27px;width:auto;'><a href='#' style='color:white;text-decoration:none;'> forum</a></form>"
+div.innerHTML= "<form action='' method='post' onsubmit='return closeOptions();'>Change your tab to Probux when new ads are available. <input type='checkbox' id='checkform' " + temp + " ><br>Refresh data after <input type='text' id='textform' value='" + timeOut + "' maxlength='3' style='width: 25px;text-align: center;height:17px;border:none;box-shadow:none;'> seconds<br><a href='https://github.com/Boltgolt/ProAlert' style='color:white;text-decoration:none;'>github </a><input type='submit' value='Save & close' style='margin-top:9px;border:none;box-shadow:none;height:27px;width:auto;'><a href='http://www.probux.com/forum/t44949--proalert-adalert-for-probux-javascript-bookmark-' style='color:white;text-decoration:none;'> forum</a></form>"
 div.onclick=""
 div.style.cursor="default";
 }
