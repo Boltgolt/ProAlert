@@ -1,7 +1,7 @@
 if (window.location.host != "www.probux.com"){
 alert("You can only use ProAlert on probux.com... (DUH)")}
 
-var doAlert = false}
+var doAlert = false
 var timeOut = 60
 var oldTitle = document.title
 var flashVar = true
