@@ -1,6 +1,8 @@
 if (window.location.host != "www.probux.com"){
 alert("You can only use ProAlert on probux.com... (DUH)")}
 
+var doAlert = false}
+var timeOut = 60
 var oldTitle = document.title
 var flashVar = true
 
@@ -155,24 +157,6 @@ if (c_end == -1){
 c_end = c_value.length;}
 c_value = unescape(c_value.substring(c_start,c_end));}
 return c_value;}
-
-function setCookie(c_name,value,exdays){
-var exdate=new Date();
-exdate.setDate(exdate.getDate() + exdays);
-var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
-do
-
-var alertCookie=getCookie("ProAlert-Alert")
-if (alertCookie == null || alertCookie == ""){
-var doAlert = false}
-else {
-var doAlert = alertCookie}
-
-var timeCookie=getCookie("ProAlert-Time")
-if (timeCookie == null || timeCookie == ""){
-var timeOut = 60}
-else {
-var timeOut = timeCookie}
 
 div.innerHTML = "Preparing ProAlert...";
 getName()
