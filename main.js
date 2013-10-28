@@ -37,7 +37,7 @@ var num = num - 1
 var done = true}}
 div.onclick = function () {openOptions()};
 div.innerHTML = "Welcome back " + xmlhttp.responseText.slice(xmlhttp.responseText.indexOf("My Account Details") + 21, xmlhttp.responseText.indexOf("My Account Details") + 21 + num) + "! The ProAlert forum topic has been shutdown. You guys will be the only ones to have ProAlert for now."
-timeSet = setTimeout(function () {time(timeOut + 1)}, 4500)}}
+timeSet = setTimeout(function () {time(timeOut + 1)}, 6000)}}
 xmlhttp.open("GET", "http://www.probux.com/account.php", true);
 xmlhttp.send()}
 
