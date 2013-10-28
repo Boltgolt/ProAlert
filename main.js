@@ -36,8 +36,8 @@ if (xmlhttp.responseText.slice(xmlhttp.responseText.indexOf("My Account Details"
 var num = num - 1
 var done = true}}
 div.onclick = function () {openOptions()};
-div.innerHTML = "Welcome back " + xmlhttp.responseText.slice(xmlhttp.responseText.indexOf("My Account Details") + 21, xmlhttp.responseText.indexOf("My Account Details") + 21 + num) + "! The ProAlert forum topic has been shutdown. You guys will be the only ones to have ProAlert for now."
-timeSet = setTimeout(function () {time(timeOut + 1)}, 6000)}}
+div.innerHTML = "Welcome back " + xmlhttp.responseText.slice(xmlhttp.responseText.indexOf("My Account Details") + 21, xmlhttp.responseText.indexOf("My Account Details") + 21 + num) + "! The ProAlert forum topic is back up, thanks for your support!"
+timeSet = setTimeout(function () {time(timeOut + 1)}, 4500)}}
 xmlhttp.open("GET", "http://www.probux.com/account.php", true);
 xmlhttp.send()}
 
@@ -48,7 +48,7 @@ div.style.height = "82px"
 if (doAlert == true) {
 var temp = "checked='checked'"} 
 else {var temp = ""}
-div.innerHTML = "<form action='' method='post' onsubmit='return closeOptions();'>Change your tab to Probux when new ads are available. <input type='checkbox' id='checkform' " + temp + " ><br>Refresh data after <input type='text' id='textform' value='" + timeOut + "' maxlength='3' style='width: 25px;text-align: center;height:17px;border:none;box-shadow:none;'> seconds<br><a href='https://github.com/Boltgolt/ProAlert' style='color:white;text-decoration:none;'>github </a><input type='submit' value='Save & close' style='margin-top:9px;border:none;box-shadow:none;height:27px;width:auto;'><a href='http://www.probux.com/forum/t44949p1--proalert-adalert-for-probux-javascript-bookmark-' style='color:white;text-decoration:none;'> forum</a></form>"
+div.innerHTML = "<form action='' method='post' onsubmit='return closeOptions();'>Change your tab to Probux when new ads are available. <input type='checkbox' id='checkform' " + temp + " ><br>Refresh data after <input type='text' id='textform' value='" + timeOut + "' maxlength='3' style='width: 25px;text-align: center;height:17px;border:none;box-shadow:none;'> seconds<br><a href='https://github.com/Boltgolt/ProAlert' style='color:white;text-decoration:none;'>github </a><input type='submit' value='Save & close' style='margin-top:9px;border:none;box-shadow:none;height:27px;width:auto;'><a href='http://www.probux.com/forum/t45255--proalert-adalert-for-probux-now-with-100-more-admin-approval-' style='color:white;text-decoration:none;'> forum</a></form>"
 div.onclick = ""
 div.style.cursor = "default";}
 
