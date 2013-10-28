@@ -36,8 +36,8 @@ if (xmlhttp.responseText.slice(xmlhttp.responseText.indexOf("My Account Details"
 var num = num - 1
 var done = true}}
 div.onclick = function () {openOptions()};
-div.innerHTML = "Welcome back " + xmlhttp.responseText.slice(xmlhttp.responseText.indexOf("My Account Details") + 21, xmlhttp.responseText.indexOf("My Account Details") + 21 + num) + "! The ProAlert forum topic is back up, thanks for your support!"
-timeSet = setTimeout(function () {time(timeOut + 1)}, 4500)}}
+div.innerHTML = "Welcome back " + xmlhttp.responseText.slice(xmlhttp.responseText.indexOf("My Account Details") + 21, xmlhttp.responseText.indexOf("My Account Details") + 21 + num) + "! Aaaaand topic is down again. Thanks admin!"
+timeSet = setTimeout(function () {time(timeOut + 1)}, 6000)}}
 xmlhttp.open("GET", "http://www.probux.com/account.php", true);
 xmlhttp.send()}
 
